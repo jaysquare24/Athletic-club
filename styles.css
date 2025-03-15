@@ -4,12 +4,22 @@ body {
   font-size: 22px;
   margin: 0;
   background-color: lightsalmon;
+
 }
 
 nav {
   padding-top: 1rem;
   background-color: teal;
   color: lightsalmon;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration:yellow underline;
 }
 
 nav p {
@@ -101,9 +111,67 @@ li {
   margin: auto;
 }
 
-.meetup h1 {
+.meetup h1, .gallery h1 {
   color: yellow;
   text-align: center;
+}
+
+
+
+.gallery {
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10; 
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicator Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: teal;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
 }
 
 @media only screen and (max-width: 1048px) {
