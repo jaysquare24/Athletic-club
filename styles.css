@@ -112,7 +112,13 @@ li {
   margin: auto;
 }
 
-.meetup h1, .gallery h1, #event, #restaurants, #testimony {
+.meetup h1, 
+.gallery h1,
+ #event,
+ #restaurants, 
+ #testimony, 
+ .meetup h2,
+ .meetup p {
   color: yellow;
   text-align: center;
 }
@@ -145,7 +151,7 @@ li {
 /* Navigation Buttons */
 .prev, .next {
   position: absolute;
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
